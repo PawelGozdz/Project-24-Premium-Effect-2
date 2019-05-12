@@ -1,0 +1,125 @@
+.hero {
+  min-height: 60vh;
+  overflow: hidden;
+  position: relative;
+  // margin-top: 5%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  &-- {
+    background-image: url('/images/photos/premium-effect-index-ys.jpg');
+
+    @include from(3) {
+      background-image: url('/images/photos/premium-effect-index-ym.jpg');
+    }
+    @include from(5) {
+      background-image: url('/images/photos/premium-effect-index-yl.jpg');
+    }
+  }
+
+  &--terms {
+    background-image: url('/images/photos/premium-effect-terms-bs.jpg');
+    
+    @include from(3) {
+      background-image: url('/images/photos/premium-effect-terms-bm.jpg');
+    }
+    @include from(5) {
+      background-image: url('/images/photos/premium-effect-terms-bl.jpg');
+    }
+  }
+
+  &--prices {
+    background-image: url('/images/photos/premium-effect-prices-bs.jpg');
+    
+    @include from(3) {
+      background-image: url('/images/photos/premium-effect-prices-bm.jpg');
+    }
+    @include from(5) {
+      background-image: url('/images/photos/premium-effect-prices-bl.jpg');
+    }
+  }
+
+  &--useful-links {
+    background-image: url('/images/photos/premium-effect-links-gs.jpg');
+
+    @include from(3) {
+      background-image: url('/images/photos/premium-effect-links-gm.jpg');
+    }
+    @include from(5) {
+      background-image: url('/images/photos/premium-effect-links-gl.jpg');
+    }
+  }
+
+  &--contact {
+    background-image: url('/images/photos/premium-effect-contact-grs.jpg');
+
+    @include from(3) {
+      background-image: url('/images/photos/premium-effect-contact-grm.jpg');
+    }
+    @include from(5) {
+      background-image: url('/images/photos/premium-effect-contact-grl.jpg');
+    }
+  }
+
+  @include from(3) {
+    background-size: cover;
+  }
+
+  .content {
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 5%;
+    @include grid($flex-direction: column, $align-items: center);
+    // flex-basis: 1;
+
+    a {
+      color: $white;
+
+      &:first-of-type {
+        margin-right: 1rem;
+        background-color: $color-secondary;
+      }
+
+      &:last-of-type {
+        margin-right: 1rem;
+        background-color: $color-primary;
+        color: $red;
+      }
+    }
+  }
+
+  h1,
+  h3 {
+    display: inline-block;
+    padding: 1rem;
+    text-align: center;
+    background: $color-primary;
+    letter-spacing: -2px;
+  }
+
+  h1 {
+    @extend .heading;
+    transform: skew(0, -3deg);
+  }
+
+  h3 {
+    @extend .heading;
+    transform: skew(0, 1deg);
+    letter-spacing: -2px;
+  }
+
+  &__btns {
+    margin-top: 3rem;
+
+    @include from(3) {
+      margin-top: 4rem;
+    }
+
+    a {
+      margin-bottom: 1rem;
+    }
+  }
+}

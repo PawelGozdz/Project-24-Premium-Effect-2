@@ -1,0 +1,24 @@
+.grid {
+  @include grid();
+}
+
+.grid__col-3 {
+  @include grid-col(3);
+}
+.grid__col-9 {
+  @include grid-col(9);
+}
+
+
+
+.grid {
+  @include grid($gutter: $default-grid-gutter);
+
+  > .grid__col-3 {
+    @include grid-col($col: 3, $gutter: $default-grid-gutter);
+  }
+  > .grid__col-9 {
+    @include grid-col($col: 9, $gutter: $default-grid-gutter);
+  }
+}
+

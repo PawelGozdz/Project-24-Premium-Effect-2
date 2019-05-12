@@ -1,0 +1,186 @@
+
+.details {
+  padding: .5rem;
+  background-color: darken($grey-dark, 15%);
+  
+  .content {
+    @include grid();
+    @include container();
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    & > span {
+      font-size: .8rem;
+      color: $white;
+      margin-top: .5rem;
+    }
+
+    @include from(3) {
+      justify-content: flex-end;
+    }
+  }
+  .detail {
+    @include grid();
+    align-items: center;
+    
+    & svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: .5rem;
+    }
+  }
+}
+
+.header {
+  border-bottom: 2px solid $color-primary;
+  @include grid($flex-direction: column);
+
+  .content {
+    @include container();
+    @include grid($flex-direction: column);
+    
+    @include from(3) {
+      @include grid($flex-direction: row);
+    }
+  }
+
+  &__controls {
+    @include grid();
+  }
+
+  &__logo {
+    display: inline-block;
+    height: 100%;
+    max-width: 16rem;
+
+    @include from(3) {
+      max-width: 20rem;
+      width: 20rem;
+    }
+
+    img {
+      height: auto;
+      display: inline-block;
+      width: 100%;
+
+      @include from(2) {
+        width: 100%;
+        max-width: 18rem;
+      }
+    }
+  }
+
+  &__hamburger {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1000;
+    max-width: 2.5rem;
+    margin-top: .4rem;
+    margin-left: auto;
+    
+    @include from(2) {
+      margin-top: 1rem;
+    }
+
+    @include from(3) {
+      display: none;
+    }
+  }
+
+  &__hamburger1, &__hamburger2, &__hamburger3 {
+    width: 35px;
+    height: 5px;
+    background-color: $grey-dark;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .nav {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    @include grid();
+    align-items: center;
+    
+    @include from(3) {
+      padding: .5rem;
+    }
+
+    &__list {
+      text-align: center;
+      z-index: 10;
+      margin-top: .5rem;
+      margin-left: auto;
+      display: none;
+      flex: 1;
+
+      @include from(3) {
+        @include grid();
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      &.open {
+        display: block;
+        transform: scale(1);
+      }
+    }
+  
+    &__item {
+      display: block;
+      margin-bottom: 1rem;
+
+      @include from(3) {
+        margin-right: .4rem;
+        display: inline-block;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      @include at(4) {
+        margin-right: .8rem;
+      }
+      @include from(5) {
+        margin-right: 1.1rem;
+      }
+    }
+    
+    &__link {
+      font-size: 1rem;
+      display: block;
+      padding: .35rem .55rem;
+      border-radius: 3px;
+      box-shadow: 0 2px 2px $grey-medium;
+      transition: .3s ease;
+      background-color: $yellow;
+
+      &:hover {
+        box-shadow: 0 2px 4px 1px $grey-medium;
+        background-color: lighten($yellow, 10%);
+      }
+
+    }
+
+    .facebook {
+      background-color: $facebook;
+      color: $white;
+
+      &:hover {
+        background-color: lighten($facebook, 10%);
+      }
+    }
+
+    i {
+      font-size: 1.5rem;
+      color: $facebook; 
+    }
+
+    .active {
+      border: 2px solid $color-secondary;
+    }
+  }
+}

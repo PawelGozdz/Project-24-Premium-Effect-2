@@ -1,0 +1,12 @@
+mixin heroSection(hero = {})
+  section(id="hero" class=`hero hero--${hero.slug.replace('/', '')}`)
+    .content
+      h1= hero.title
+      if (hero.subTitle)
+        h3= hero.subTitle 
+      if (hero.btn1 || hero.btn2)
+        .hero__btns
+          if (hero.btn1)
+            a(href=`${hero.btn1}`).button.button__cta= hero.btn1Text
+          if (hero.btn2)
+            a(href=`${hero.btn2}`).button.button__cta= hero.btn2Text

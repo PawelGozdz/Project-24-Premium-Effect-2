@@ -1,0 +1,52 @@
+section.car#car
+  .content
+    h2 Driving Lessons
+    .car__service.car__service--auto
+      .car__car
+        picture(title='Learn to drive a car with automatic transmission')
+          source(media='(min-width: 760px)', 
+                srcset='./images/photos/automatic-transmission-hyundai-l.jpg', 
+                alt='Driving car with automatic gearbox')
+          source(srcset='./images/photos/automatic-transmission-hyundai-s.jpg', 
+                alt='Driving car with automatic gearbox')
+          img(src='./images/photos/automatic-transmission-hyundai-l.jpg', 
+                alt='Driving car with automatic gearbox')
+
+      article.car__info
+        h3 Automatic Transmission
+        ul
+          li #[strong Hyundai ix20]
+          li
+            span petrol 1.6 l
+          li
+            span 5 door
+          li
+            span 2014
+          li
+            a(href="/prices").button.button__cta See Prices
+
+    .car__service.car__service--manual
+      .car__car
+        picture(title='Learn to drive a car with manual transmission')
+          source(media='(min-width: 760px)', 
+                srcset='./images/photos/manual-transmission-C1-l.jpg', 
+                alt='Driving car with manual gearbox')
+          source(srcset='./images/photos/manual-transmission-C1-s.jpg',
+                alt='Driving car with manual gearbox')
+          img(src='./images/photos/manual-transmission-C1-l.jpg', 
+                alt='Driving car with manual gearbox')
+      article.car__info
+        h3
+          span.color-primary Manual
+          span.color-secondary Transmission
+        ul
+          li #[strong Citroen C1]
+          li
+            span petrol 1.0 l
+          li
+            span 3 door
+          li
+            span 2015
+          li
+            a(href="/prices").button.button__cta See Prices
+      

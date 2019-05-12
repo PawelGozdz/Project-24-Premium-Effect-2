@@ -1,0 +1,6 @@
+/public/dist
+/public/images/photos
+node_modules
+data
+readme.md
+variables.env

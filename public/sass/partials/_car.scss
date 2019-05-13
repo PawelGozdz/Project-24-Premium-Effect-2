@@ -1,14 +1,10 @@
 .car {
   line-height: 1.7;
   position: relative;
-  // margin-bottom: 3rem;
-
-  // @include from(3) {
-  //   margin-bottom: 5rem;
-  // }
+  background-image: linear-gradient( transparent, rgba($blue-vanadyl, .15));
 
   h2 {
-    margin: 3rem auto;
+    margin: 6rem auto 2rem;
 
     @include from(3) {
       margin-bottom: 4rem;
@@ -29,10 +25,9 @@
     color: $grey-dark;
     position: relative;
     margin-bottom: 1rem;
+    
 
     & > div:not(:last-child) {
-      border-bottom: 1px solid $grey-medium;
-      margin-bottom: 3rem;
       
       @include from(3) {
         margin-bottom: 6rem;
@@ -41,8 +36,6 @@
   }
 
   &__service {
-    // @include grid($flex-direction: column);
-    margin-top: -4rem;
     
     @include from(3) {
       @include grid($flex-direction: row);
@@ -58,6 +51,10 @@
         }
       }
     }
+
+    @include from(5) {
+      margin-top: 1rem;
+    }
   }
   
   &__car {
@@ -65,7 +62,7 @@
     @include grid-col($col: 100%);
     
     @include from(3) {
-      @include grid-col($col: 40%);
+      @include grid-col($col: 60%);
     }
 
     &:last-child {
@@ -84,8 +81,13 @@
       max-width: 16rem;
       
       @include from(3) {
-        max-width: 27rem;
+        max-width: 37rem;
       }
+    }
+
+    img {
+      box-shadow: -4px -4px 20px -6px rgba($color-secondary, .8),
+                  4px 4px 20px -6px rgba($color-primary, 1);
     }
   }
 
@@ -95,7 +97,7 @@
     @include grid-col($col: 100%);
     
     @include from(3) {
-      @include grid-col($col: 60%);
+      @include grid-col($col: 40%);
     }
     
     @include from(3) {
@@ -103,22 +105,11 @@
     }
 
     h3 {
-      @extend .heading;
-      padding: .75rem;
-      display: inline-block;
-      margin-bottom: .5rem;
-      color: $grey-dark;
-      border-bottom: 2px solid $color-primary;
-      background-color: $color-primary;
-      color: $red;
-      background-image: -webkit-gradient(linear,0% 30%,70% 100%,from($color-secondary),to($color-primary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transform: skew(0, -3deg);
+      
 
-      @include from(3) {
-        text-align: left;
-      }
+      // @include from(3) {
+      //   text-align: left;
+      // }
 
       span:nth-child(2) {
         margin-left: .75rem;
@@ -143,11 +134,8 @@
 
     .button__cta {
       font-weight: 500;
-      // padding: .25rem;
       background: $blue-vanadyl;
-      // background-image: $blue-linear-gradient;
       color: white;
-      // float: right;
     }
   }
 }

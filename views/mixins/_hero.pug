@@ -1,9 +1,11 @@
 mixin heroSection(hero = {})
   section(id="hero" class=`hero hero--${hero.slug.replace('/', '')}`)
     .content
-      h1= hero.title
+      - const heading1 = hero.title.split(' ').length > 1 ? hero.title.split(' ').map(word => `<span style="display: inline;">${word}</span>`).join(' ') : hero.title;
+      h1: !=heading1
       if (hero.subTitle)
-        h3= hero.subTitle 
+        - const heading2 = hero.subTitle.split(' ').length > 1 ? hero.subTitle.split(' ').map(word => `<span style="display: inline;">${word}</span>`).join(' ') : hero.subTitle;
+        h3: !=heading2
       if (hero.btn1 || hero.btn2)
         .hero__btns
           if (hero.btn1)

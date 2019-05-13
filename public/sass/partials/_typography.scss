@@ -34,11 +34,12 @@ p a {
 
 p {
   line-height: 2;
-  // font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 h1 {
   font-size: 2rem;
+  display: block;
   
   @include from(2) {
     font-size: 2.3rem;
@@ -91,4 +92,19 @@ h3 {
   margin-top: 2rem;
   z-index: 2;
   line-height:1.1;
+}
+
+h3.sub-heading {
+  @extend .heading;
+  padding: .75rem;
+  display: inline-block;
+  margin-bottom: .5rem;
+  color: $grey-dark;
+  border-bottom: 2px solid $color-primary;
+  background-color: $color-primary;
+  color: $red;
+  background-image: -webkit-gradient(linear,0% 30%,70% 100%,from($color-secondary),to($color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: skew(0, -3deg);
 }

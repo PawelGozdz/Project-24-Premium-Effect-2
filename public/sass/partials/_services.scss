@@ -15,7 +15,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-image: linear-gradient(to right, rgba($blue-light, .95), rgba($blue-dark, .95));
+    background-image: linear-gradient(to right, rgba($blue-gradient-1, .95), rgba($purple, .95));
     z-index: 0;
   }
   
@@ -31,8 +31,10 @@
   }
 
   &__info {
+    background-image: linear-gradient(to right, rgba($blue-gradient-1, .5), rgba($blue-gradient-2, .4));
 
     text-align: center;
+    // background-color: darken();
     & > h3 {
     }
 

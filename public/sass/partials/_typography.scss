@@ -4,7 +4,63 @@
          url('/fonts/panama-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: 'revue';
+    src: url('/fonts/revue_pl.allfont.net-webfont.woff2') format('woff2'),
+         url('/fonts/revue_pl.allfont.net-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glyphter';
+  src: url('/fonts/Glyphter.eot');
+  src: url('/fonts/Glyphter.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/Glyphter.woff') format('woff'),
+       url('/fonts/Glyphter.ttf') format('truetype'),
+       url('/fonts/Glyphter.svg#Glyphter') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*='icon-']:before{
+  display: inline-block;
+  margin-right: .25rem;
+  text-shadow: 1px 1px 3px $blue-gradient-1;
+  font-family: 'Glyphter';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+.icon {
+  &-smartphone:before{content:'\0041';}
+  &-fuel:before{content:'\0042';}
+  &-calendar:before{content:'\0043';}
+  &-new:before{content:'\0044';}
+  &-intense:before{content:'\0045';}
+  &-refresh:before{content:'\0046';}
+  &-place:before{content:'\0047';}
+  &-motorway:before{content:'\0048';}
+  &-home:before{content:'\0049';}
+  &-student:before{content:'\004a';}
+  &-referal:before{content:'\004b';}
+  &-group:before{content:'\004c';}
+  &-basic:before{content:'\004d';}
+  &-link:before{content:'\004e';}
+  &-block:before{content:'\004f';}
+  &-cancel:before{content:'\0050';}
+  &-phone:before{content:'\0051';}
+  &-address:before{content:'\0052';}
+  &-email:before{content:'\0053';}
+  &-five:before{content:'\0054';}
+  &-three:before{content:'\0055';}
+  &-cars:before{content:'\0056';}
+  &-doors:before{content:'\0057';}
+  &-auto:before{content:'\0059';}
 }
 
 html {
@@ -18,8 +74,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   // font-size: 5rem;
-  font-family: 'Panama';
-  font-weight: 600;
+  font-family: 'revue';
+  font-weight: 300;
   letter-spacing: -1px;
 }
 
@@ -103,7 +159,7 @@ h3.sub-heading {
   border-bottom: 2px solid $color-primary;
   background-color: $color-primary;
   color: $red;
-  background-image: -webkit-gradient(linear,0% 30%,70% 100%,from($color-secondary),to($color-primary));
+  background-image: -webkit-gradient(linear,0% 25%, 80% 100%,from($color-primary),to($color-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: skew(0, -3deg);

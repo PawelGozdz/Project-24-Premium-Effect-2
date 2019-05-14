@@ -105,11 +105,6 @@
     }
 
     h3 {
-      
-
-      // @include from(3) {
-      //   text-align: left;
-      // }
 
       span:nth-child(2) {
         margin-left: .75rem;
@@ -121,6 +116,10 @@
       margin-bottom: 2rem;
     }
 
+    li {
+      @include grid();
+    }
+
     li:not(:last-child) {
       margin-bottom: 1rem;
       border-bottom: 1px solid $grey-medium;
@@ -130,6 +129,7 @@
       font-size: 1.5rem;
       margin-right: .5rem;
       color: $blue-vanadyl;
+      margin-right: auto;
     }
 
     .button__cta {

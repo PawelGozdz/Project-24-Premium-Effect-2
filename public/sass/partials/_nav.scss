@@ -13,6 +13,10 @@
       font-size: .8rem;
       color: $white;
       margin-top: .5rem;
+
+      &:first-child {
+        margin-right: .5rem;
+      }
     }
 
     @include from(3) {

@@ -1,0 +1,35 @@
+section.lessons#lessons
+  .content
+    h2 Driving Lessons
+    .lessons__boxes
+      .lessons__box.lessons__box--img
+        picture(title='Experienced driving instructor').lessons__picture
+          source(media='(min-width: 760px)',
+                srcset='./images/photos/driving-instructor-l.jpg', 
+                alt='Experienced driving instructor')
+          source(srcset='./images/photos/driving-instructor-s.jpg', 
+                alt='Experienced driving instructor')
+          img(src='./images/photos/driving-instructor-l.jpg', 
+                alt='Experienced driving instructor')
+      .lessons__box.lessons__box--img
+        picture(title='Bedfordshire & Buckinghamshire areas').lessons__picture
+          source(media='(min-width: 760px)', 
+                srcset='./images/photos/bedfordshire-buckinghamshire-l.jpg',
+                alt='Bedfordshire & Buckinghamshire areas')
+          source(srcset='./images/photos/bedfordshire-buckinghamshire-s.jpg', 
+                alt='Bedfordshire & Buckinghamshire areas')
+          img(src='./images/photos/bedfordshire-buckinghamshire-l.jpg', 
+                alt='Bedfordshire & Buckinghamshire areas')
+
+      article.lessons__box.lessons__box--text
+        h3.sub-heading Welcome to Premium Effect Driving School
+        p We are DVSA approved and properly trained Driving Instuctors. We are fully qualified, experienced, honest, friendly & patient.
+        p Our mission is to walk with you through the entire process from the first pass to the end, when you receive your driving license.
+        p 
+          span(title="Driving School") 
+            span.color-primary Premium 
+            span.color-secondary Effect Driving School has been providing students with a rich and diverse learning environment.
+      article.lessons__box.lessons__box--text
+        h3.sub-heading Bedfordshire & Buckinghamshire
+        p We cover Bedford and Milton Keynes and local areas. We are able to pick you up from any address in the local area, so they can pick you up from school, college, work or home.
+        p Would like to try driving at night? Not a problem. It helps improving hazard awareness skills and confidence. Our driving school can help you out with this challenge.

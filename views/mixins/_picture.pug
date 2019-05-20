@@ -1,0 +1,9 @@
+mixin picture(image = {})
+  picture(title=image.name)
+    source(media=(image.breakpoint || '(min-width: 760px)'), 
+          srcset=`./images/photos/${image.name}-l.jpg`, 
+          alt=image.alt)
+    source(srcset=`./images/photos/${image.name}-l.jpg`,
+          alt=image.alt)
+    img(src=`./images/photos/${image.name}-l.jpg`, 
+          alt=image.alt)

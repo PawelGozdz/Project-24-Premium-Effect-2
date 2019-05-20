@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const Links = require('../models/Links');
+const Img = require('../models/Img');
 const multer = require('multer');
 
-exports.getIndex = (req, res, next) => {
+exports.getIndex = async (req, res, next) => {
+  
   res.render('index', { hero: req });
-
 };

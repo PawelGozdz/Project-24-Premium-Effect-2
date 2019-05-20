@@ -69,7 +69,8 @@ html {
 
 body {
   font-size:1.5rem;
-  color:$black;
+  // color:$black;
+  color: $grey-dark;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -77,6 +78,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'revue';
   font-weight: 300;
   letter-spacing: -1px;
+  max-width: 100%;
 }
 
 a {
@@ -89,8 +91,8 @@ p a {
 }
 
 p {
-  line-height: 2;
-  font-size: 1.4rem;
+  line-height: 1.75;
+  font-size: 1rem;
 }
 
 h1 {

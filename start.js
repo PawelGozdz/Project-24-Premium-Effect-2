@@ -19,6 +19,7 @@ mongoose.connection.on('error', (err) => {
 
 // READY?! Let's go!
 require('./models/Links');
+require('./models/Img');
 
 // Start our app!
 const app = require('./app');

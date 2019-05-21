@@ -61,6 +61,7 @@
   &-cars:before{content:'\0056';}
   &-doors:before{content:'\0057';}
   &-auto:before{content:'\0059';}
+  &-star:before{content:'\0068';}
 }
 
 html {
@@ -136,6 +137,17 @@ h3 {
   }
   @include from(4) {
     font-size: 1.7rem;
+  }
+}
+
+h4 {
+  font-size: 1.1rem;
+
+  @include from(2) {
+    font-size: 1.2rem;
+  }
+  @include from(4) {
+    font-size: 1.3rem;
   }
 }
 

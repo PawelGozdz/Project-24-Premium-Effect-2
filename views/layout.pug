@@ -37,20 +37,25 @@ html
         each heroSection in h.hero
           if (heroSection.slug == currentPath)
             +heroSection(heroSection)
-            
-        block messages
-          if locals.flashes
-            .inner
-              .flash-messages
-                - const categories = Object.keys(locals.flashes)
-                each category in categories
-                  each message in flashes[category]
-                    .flash(class=`flash--${category}`)
-                      p.flash__text!= message
-                      button.flash__remove(onClick="this.parentElement.remove()") &times;
+
         .content
           block content
 
+        footer.footer#footer
+          .content
+            nav.footer__nav
+              ul.footer__list
+                each item in h.menu
+                  li.footer__item
+                    a.footer__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'active' : ''),
+                    class=(item.class))
+                      span #{item.title}
+
+            .footer__other
+              p All Rights Reserved &reg; #{new Date().getFullYear()}
+              p.footer__designer 
+                span.mute Designed by
+                a(href="http://rwd-stronyinternetowe.pl", target="_blank").mute RWD Strony Internetowe
+
       block scripts
-        script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)
         script(src="/dist/App.bundle.js")

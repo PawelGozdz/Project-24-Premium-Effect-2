@@ -1,0 +1,78 @@
+.footer {
+  background: $grey-dark;
+  color: $grey-light;
+  padding: 2rem 0 1rem;
+
+  @include at(1) {
+    padding-bottom: 2rem;
+  }
+  
+  a {
+    color: $grey-light;
+  }
+
+  .content {
+    @include container();
+    text-align: center;
+  }
+
+  &__list {
+    margin: auto;
+    // display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: 1.2rem;
+    // width: 50%;
+    // flex: 50%;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 3px;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+
+    &:last-child {
+      background: $facebook;
+    }
+
+    @include from(2) {
+      width: auto;
+      // float: left;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: .2rem 1rem;
+
+    &:hover {
+      background-color: lighten($grey-dark, 11%);
+    }
+  }
+
+  &__other {
+    text-align: center;
+  }
+
+  &__designer {
+    padding: .5rem 0;
+    display: block;
+    font-size: 30%;
+    
+    & > span,
+    & > a {
+      
+      @include from(2) {
+        display: inline-block;
+      }
+    }
+
+    & span { margin-right: .5rem; }
+  }
+}

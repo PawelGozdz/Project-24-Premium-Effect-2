@@ -37,3 +37,46 @@ exports.hero = [
   { slug: '/contact', title: 'Contuct Us', subTitle: '', btn1: '/contact#contact', btn2: '' },
   { slug: 'https://www.facebook.com/premiumeffectdrivingschool', title: 'f', subTitle: '', btn1: '', btn2: '', class: 'facebook'},
 ];
+
+exports.testimonials = [
+  {
+    name: 'Olga Pasa',
+    star: '5.0',
+    text: 'Had the best instructor ever! Marzena helped me a lot sharing her knowledge with me! A great woman! Passed my test from the first attempt! Wish you good students!'
+  },
+  {
+    name: 'Sarah Williams',
+    star: '5.0',
+    text: 'Marge was the nicest instructor, she is so down to earth and puts you at such ease she is so patient and friendly I couldn\'t asked for a nicer person to help me on my journey towards driving. I am so happy to of had the pleasure of meeting her and would recommend her to anyone wanting to learning to drive she truly is a fantastic person :)'
+  },
+  {
+    name: 'James Garlo',
+    star: '4.9',
+    text: 'Marge was the best driving instructor I have had in 18 years!! I used to hate driving but Marge helped me enjoy controlling the car and before long I couldn\'t wait to get back in the driving seat!! She is patient, calm and helps put you at ease. She is extremely knowledgeable on all aspects of drivig and helped me with my understanding of driving safely, manouveures and enjoying driving! I would recommend Marge to anybody who wants to learn safely, efficiently and in a calm environment! She is amazing and the best in the business!! Thanks Marge and Resto Driving School for making me a very happy driver!!'
+  },
+  {
+    name: '11BOOWHO',
+    star: '5.0',
+    text: 'Fantastic driving instructor Marge. She was able to put up with all my stresses and mistakes that were made along the way! But she corrected me!.. she was always calm and she has a great sense of humour she gave me the confidence to be able to pass my test. I would Highly recommend her as an instructor and I would highly recommend retro driving school to anyone looking for automatic driving :)'
+  },
+  {
+    name: 'Eliza M',
+    star: '5.0',
+    text: 'Great Instructor & company, helped me pass my test short notice.'
+  },
+  {
+    name: 'Maxine Franks',
+    star: '5.0',
+    text: 'Fantastic driving instructor Marg. She put up with my stresses always calm and a great sense of humour she gave me the confidence to pass my test whoop whoop.'
+  },
+  {
+    name: 'Iwona Nowakowska',
+    star: '5.0',
+    text: 'Marzena is a great instructor - patient, kind encouraging! Learning with her was a pleasure! I wish everyone such a wonderful time behind the wheel when just learning how to do it. I feel confident on the road thanks to lessons with Marzena and I would highly recommend her to enyone who thinks about becoming a driver and is looking for great teacher!'
+  },
+  {
+    name: 'Danielle Fuller',
+    star: '5.0',
+    text: 'Marzena is a fantastic driving instructor. She was so patient and caring towards me. She genuinely cares about her pupils and wants the best for them. thank you :)'
+  },
+];

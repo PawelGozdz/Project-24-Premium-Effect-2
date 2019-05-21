@@ -1,0 +1,10 @@
+if h.testimonials.length > 0
+  section.testimonials#testimonials.wow
+    .content
+      h2 Our Clients About Us
+      each t in h.testimonials
+        .testimonials__slides
+          article.testimonials__slide.showing
+            h4= t.name
+            span.testimonials__number= t.star
+            p.testimonials__text= t.text

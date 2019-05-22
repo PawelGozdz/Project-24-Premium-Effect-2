@@ -1,7 +1,6 @@
-# /public/dist
-# /public/images/photos
+
 node_modules/
 *.log
-# data
-# readme.md
+data
+readme.md
 variables.env

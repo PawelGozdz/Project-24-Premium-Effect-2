@@ -10,15 +10,22 @@
   }
 }
 
+.invalid {
+  border: 1px solid red;
+}
+
 .flash {
   background: white;
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  margin: 0 auto;
   margin-bottom: 2rem;
-  padding: 2rem;
+  padding: .5rem;
   position: relative;
   z-index: 1;
   border-radius: 3px;
   display: flex;
+  max-width: 40rem;
+  font-size: 80%;
   animation: slideIn forwards .1s ease-in-out 2;
   animation-timing-function: cubic-bezier(0.01, 1.68, 0.58, 1);
   & + .flash {
@@ -42,10 +49,10 @@
     display: block;
     background: white;
     position: absolute;
-    width: calc(100% - 16px);
-    height: calc(100% - 16px);
-    top: 8px;
-    left: 8px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    top: 2px;
+    left: 2px;
     z-index: -1;
     box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);
     border-radius: 3px;

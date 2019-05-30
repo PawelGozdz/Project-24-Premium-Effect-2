@@ -1,0 +1,23 @@
+mixin loginForm()
+  - const validationErrors = userInputErrors || []
+  form.form(action=(currentPath) method="POST")
+    h2=title
+    label(for="email") Email Address
+    input(type="email" 
+      name="email" 
+      value=(body && body.email)
+      class=(validationErrors.find(e => e.param === 'email') ? 'invalid' : ''))
+    label(for="password") Password
+    input(type="password" 
+      name="password" 
+      value=(body && body.password)
+      class=(validationErrors.find(e => e.param === 'password') ? 'invalid' : ''))
+    label(for="answer").form__text Type Answer
+    - const compare = h.printNumbersToCompare()
+    span.form__result= compare
+    input(type="hidden" name="question" value=compare)
+    input(type="number" 
+      id="answer" 
+      name="answer"
+      class=(validationErrors.find(e => e.param === 'answer') ? 'invalid' : ''))
+    input(type="submit" value="Log in").button.button__cta

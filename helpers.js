@@ -20,6 +20,74 @@ exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 // Some details about the site
 exports.siteName = `Premium Effect Driving School!`;
 
+// Get random number
+const getRandomNumber = (scope) => Math.floor(Math.random() * scope);
+
+// Print number  + stringNumber
+exports.printNumbersToCompare = () => {
+  const number = getRandomNumber(100);
+  let charNumber = '';
+
+  switch(getRandomNumber(10)) {
+    case 0: charNumber = 'zero';
+      break;
+    case 1: charNumber = 'one';
+      break;
+    case 2: charNumber = 'two';
+      break;
+    case 3: charNumber = 'three';
+      break;
+    case 4: charNumber = 'four';
+      break;
+    case 5: charNumber = 'five';
+      break;
+    case 6: charNumber = 'six';
+      break;
+    case 7: charNumber = 'seven';
+      break;
+    case 8: charNumber = 'eight';
+      break;
+    case 9: charNumber = 'nine';
+      break
+    default: 'This is not a number!'
+  }
+
+  return `${number} + ${charNumber}`;
+};
+
+// convert string to number and return sum for further validation
+exports.getSumFromNumberAndString = (stringNumber) => {
+  const splitString = stringNumber.split('+').map(el => el.trim());
+  let charNumber;
+  const number = +splitString[0];
+
+  switch(splitString[1]) {
+    case 'zero': charNumber = 0;
+      break;
+    case 'one': charNumber = 1;
+      break;
+    case 'two': charNumber = 2;
+      break;
+    case 'three': charNumber = 3;
+      break;
+    case 'four': charNumber = 4;
+      break;
+    case 'five': charNumber = 5;
+      break;
+    case 'six': charNumber = 6;
+      break;
+    case 'seven': charNumber = 7;
+      break;
+    case 'eight': charNumber = 8;
+      break;
+    case 'nine': charNumber = 9;
+      break
+    default: 'This is not a number!'
+  }
+
+  return number + (charNumber || undefined);
+};
+
 exports.menu = [
   { slug: '/', title: 'Home', icon: 'home', },
   { slug: '/prices', title: 'Prices', icon: 'price', },

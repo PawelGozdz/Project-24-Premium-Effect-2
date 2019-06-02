@@ -2,5 +2,15 @@ extends layout
 
 block content
 
-  h2= title
-  p Account
+  section.account#account
+    .content
+      h4 Display / Hide sections
+      form(action="").form
+        .form__input-group
+          span.form__section-title Succesful Students
+          .checkbox
+            input(type="checkbox" id="passedTest" name="passedTest" value="1").checkbox__input
+            label(for="passedTest").checkbox__label
+          span.account__status Status
+            //- span.account__status.account__status--active
+

@@ -1,0 +1,43 @@
+.account {
+  
+  .content {
+    @include container();
+    text-align: center;
+  }
+
+  .form {
+    background-color: lighten($grey-light, 20%);
+    padding: .5rem .75rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: .9rem;
+
+    &__input-group {
+      margin-right: 1rem;
+      border: 1px solid $grey-light;
+      padding: .5rem 1rem;
+      @include grid($justify-content: center, $align-items: center);
+      box-shadow: 1px 1px 3px -1px $grey-medium;
+  
+      &:hover {
+        box-shadow: 1px 1px 13px 0 $grey-medium;
+      }
+    }    
+  }
+  
+  &__status {
+    padding: .25rem .35rem;
+    border: 1px solid transparent;
+    // transform: translateX(60px);
+
+    &--active {
+      border: 1px solid $green;
+      color: $green;
+    }
+
+    &--inactive {
+      border: 1px solid $color-primary;
+      color: $color-primary;
+    }
+  }
+}

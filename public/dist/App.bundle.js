@@ -135,7 +135,40 @@ __webpack_require__(2);
 
 __webpack_require__(1);
 
+__webpack_require__(5);
+
 var _bling = __webpack_require__(0);
+
+/***/ }),
+/* 4 */,
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _bling = __webpack_require__(0);
+
+var checkbox = (0, _bling.$)('#passedTest');
+var accountStatus = (0, _bling.$)('.account__status');
+
+function addInitialStatus() {
+
+  console.log('CHECKED??', checkbox.checked);
+}
+
+addInitialStatus();
+
+// Hamburger menu
+checkbox.onclick = function (e) {
+  console.log(e);
+  console.log(e.target.checked);
+};
+
+// function openMenu() {
+// // console.log(navMenu);
+// navMenu.classList.toggle('open');
+// }
 
 /***/ })
 /******/ ]);

@@ -102,7 +102,8 @@ exports.hero = [
   { slug: '/prices', title: 'Pricing', subTitle: 'Choose What Suits You Best', btn1: '', btn2: '' },
   { slug: '/useful-links', title: 'Useful Links', subTitle: '', btn1: '', btn2: '' },
   { slug: '/terms', title: 'Terms & Conditions', subTitle: 'Everything You Need to Know', btn1: '', btn2: '' },
-  { slug: '/contact', title: 'Contuct Us', subTitle: '', btn1: '/contact#contact', btn2: '' },
+  { slug: '/contact', title: 'Contuct Us', subTitle: '', btn1: '/contact#contact', btn2: '' },  
+  { slug: '/account', title: 'Your Account', subTitle: '', btn1: '', btn2: '' },
   { slug: 'https://www.facebook.com/premiumeffectdrivingschool', title: 'f', subTitle: '', btn1: '', btn2: '', class: 'facebook'},
 ];
 

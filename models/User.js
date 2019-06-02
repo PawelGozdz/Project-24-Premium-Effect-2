@@ -20,6 +20,28 @@ const userSchema = new Schema({
     required: 'Please supply a name',
     trim: true
   },
+  options: {
+    access: {
+      type: Number,
+      default: 10
+    },
+    sections: [
+      {
+        name: {
+          type: String,
+          trim: true,
+          lowercase: true
+        },
+        page: {
+          type: String,
+        },
+        status: {
+          type: Boolean,
+          default: false
+        }
+      }
+    ]
+  },
   resetPasswordToken: String,
   resetPasswordExpires: Date
 });

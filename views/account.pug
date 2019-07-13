@@ -1,16 +1,21 @@
 extends layout
 
+include mixins/_sectionForm
+include mixins/_editStudent
+
 block content
 
   section.account#account
     .content
       h4 Display / Hide sections
-      form(action="").form
-        .form__input-group
-          span.form__section-title Succesful Students
-          .checkbox
-            input(type="checkbox" id="passedTest" name="passedTest" value="1").checkbox__input
-            label(for="passedTest").checkbox__label
-          span.account__status Status
-            //- span.account__status.account__status--active
+      div.account__forms
+        if h.accountForms.length > 0
+          each accountForm in h.accountForms
+            +sectionForm(accountForm)
+              //- span.account__status.account__status--active
+
+      h4 Add / Edit New Student
+      div.account__forms
+        //- pre= h.dump(h.instructors)
+        +editStudent()
 

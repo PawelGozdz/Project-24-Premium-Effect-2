@@ -1,21 +1,20 @@
-
 .details {
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: darken($grey-dark, 15%);
-  
+
   .content {
     @include grid();
     @include container();
     flex-wrap: wrap;
     justify-content: center;
-    
+
     & > span {
-      font-size: .8rem;
+      font-size: 0.8rem;
       color: $white;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
 
       &:first-child {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
     }
 
@@ -26,11 +25,11 @@
   .detail {
     @include grid();
     align-items: center;
-    
+
     & svg {
       width: 1.5rem;
       height: 1.5rem;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
 }
@@ -43,7 +42,7 @@
   .content {
     @include container();
     @include grid($flex-direction: column);
-    
+
     @include from(3) {
       @include grid($flex-direction: row);
     }
@@ -80,9 +79,9 @@
     cursor: pointer;
     z-index: 1000;
     max-width: 2.5rem;
-    margin-top: .4rem;
+    margin-top: 0.4rem;
     margin-left: auto;
-    
+
     @include from(2) {
       margin-top: 1rem;
     }
@@ -92,7 +91,9 @@
     }
   }
 
-  &__hamburger1, &__hamburger2, &__hamburger3 {
+  &__hamburger1,
+  &__hamburger2,
+  &__hamburger3 {
     width: 35px;
     height: 5px;
     background-color: $grey-dark;
@@ -108,15 +109,15 @@
     z-index: 100;
     @include grid();
     align-items: center;
-    
+
     @include from(3) {
-      padding: .5rem;
+      padding: 0.5rem;
     }
 
     &__list {
       text-align: center;
       z-index: 10;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
       margin-left: auto;
       display: none;
       flex: 1;
@@ -138,13 +139,13 @@
         transform: scale(1);
       }
     }
-  
+
     &__item {
       display: block;
       margin-bottom: 1rem;
 
       @include from(3) {
-        margin-right: .4rem;
+        margin-right: 0.4rem;
         display: inline-block;
 
         &:last-child {
@@ -153,7 +154,7 @@
       }
 
       @include at(4) {
-        margin-right: .8rem;
+        margin-right: 0.8rem;
       }
       @include from(5) {
         margin-right: 1.1rem;
@@ -167,21 +168,20 @@
         }
       }
     }
-    
+
     &__link {
       font-size: 1rem;
       display: block;
-      padding: .35rem .55rem;
+      padding: 0.35rem 0.55rem;
       border-radius: 3px;
       box-shadow: 0 2px 2px $grey-medium;
-      transition: .3s ease;
+      transition: 0.3s ease;
       background-color: $yellow;
 
       &:hover {
         box-shadow: 0 2px 4px 1px $grey-medium;
         background-color: lighten($yellow, 10%);
       }
-
     }
 
     .facebook {
@@ -195,7 +195,7 @@
 
     i {
       font-size: 1.5rem;
-      color: $facebook; 
+      color: $facebook;
     }
 
     .active {

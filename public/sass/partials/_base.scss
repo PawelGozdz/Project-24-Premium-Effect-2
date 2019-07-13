@@ -63,8 +63,9 @@ button {
 
 // FORMS, INPUTS
 
-input, textarea {
-  border: 0;
+input, textarea, select, option {
+  border: 1px solid transparent;
+  &:focus {outline:0;}
 }
 
 input:active,

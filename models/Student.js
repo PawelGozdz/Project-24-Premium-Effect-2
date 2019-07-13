@@ -11,17 +11,17 @@ const studentSchema = new mongoose.Schema({
   },
   slug: String,
   header: String,
-  description: [{
+  description: {
     type: String,
     trim: true
-  }],
-  exam: Date,
+  },
+  exam: Date, 
   created: {
     type: Date,
     default: Date.now
   },
-  photo: [String],
-  instructor: [{
+  photos: [String],
+  instructor: {
     type: mongoose.Schema.ObjectId,
     // author będzie się odwoływał do 'User'
     ref: 'User',
@@ -31,14 +31,16 @@ const studentSchema = new mongoose.Schema({
       type: Number,
       default: 5
     }
-  }],
+  },
   socialMedia: {
     facebook: String,
     instagram: String,
-    youtube: String,
-    linkedIn: String
+    youtube: String
   },
-  displayStatus: Boolean
+  displayStatus: {
+    type: Boolean,
+    default: true
+  }
 });
 
 // Indexowanie pól ze Schemy

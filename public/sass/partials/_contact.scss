@@ -1,0 +1,46 @@
+.contact {
+  .content {
+    margin-bottom: 4rem;
+    @include container();
+  }
+
+  &__details {
+    @include grid($flex-direction: column);
+    @include from(3) {
+      flex-direction: row;
+    }
+  }
+
+  &__detail {
+    text-align: center;
+    line-height: 2;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $grey-medium;
+
+    @include from(3) {
+      @include grid-col($col: 33.3333%);
+      text-align: center;
+      border-bottom: 1px solid transparent;
+      margin-bottom: 6rem;
+    }
+  }
+
+  header {
+    i {
+      font-size: 1.5rem;
+      color: $blue-vanadyl;
+      // margin-bottom: 2rem;
+    }
+
+    h3 {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 18rem;
+    min-height: 15rem;
+  }
+}

@@ -1,0 +1,67 @@
+extends layout
+
+block content
+
+  section.pricing#pricing
+    .content
+      h2 Our Prices
+      //- pre= 
+      .pricing__info
+        ul.pricing__row
+          li.pricing__col.pricing__col--1.pricing__header
+          li.pricing__col.pricing__col--2.pricing__header: p Manual
+          li.pricing__col.pricing__col--3.pricing__header: p Automatic
+      .pricing__info
+        header
+          h3.sub-heading Regular
+        ul.pricing__row
+          li.pricing__col.pricing__col--1: p Standard 1 hour
+          li.pricing__col.pricing__col--2: p #{pricing.regular.option1.manual} £
+          li.pricing__col.pricing__col--3: p #{pricing.regular.option1.automatic} £
+        ul.pricing__row
+          li.pricing__col.pricing__col--1: p 3 hour motorway driving
+          li.pricing__col.pricing__col--2: p #{pricing.regular.option2.manual} £
+          li.pricing__col.pricing__col--3: p #{pricing.regular.option2.automatic} £
+      .pricing__info
+        header
+          h3.sub-heading Special Offers
+          p First 2 hour driving session 
+            span.color-secondary only 40 £
+        ul.pricing__row
+          li.pricing__col.pricing__col--1: p Student Discount
+          li.pricing__col.pricing__col--2: p #{pricing.special.option1.manual} £
+          li.pricing__col.pricing__col--3: p #{pricing.special.option1.automatic} £
+      .pricing__info
+        header
+          h3.sub-heading Intensive Courses
+          p Special summer offer
+          p.mute ***Prices valid until July 2019 
+        ul.pricing__row
+          li.pricing__col.pricing__col--1: p Block Bookings 10h
+            br
+            span.pricing__read (pre paid 5 x 2hour block bookings)
+          li.pricing__col.pricing__col--2: p #{pricing.intensive.option1.manual} £
+          li.pricing__col.pricing__col--3: p #{pricing.intensive.option1.automatic} £
+            p.pricing__earn you save 20 £
+        ul.pricing__row
+          li.pricing__col.pricing__col--1: p Block Bookings 20h
+            br
+            span.pricing__read (pre paid 10 x 2hour block bookings)
+          li.pricing__col.pricing__col--2: p #{pricing.intensive.option2.manual} £
+          li.pricing__col.pricing__col--3: p #{pricing.intensive.option2.automatic} £
+            p.pricing__earn you save 20 £
+        ul.pricing__row
+          li.pricing__col.pricing__col--1: p Block Bookings 30h
+            br
+            span.pricing__read (pre paid 15 x 2hour block bookings)
+          li.pricing__col.pricing__col--2: p #{pricing.intensive.option3.manual} £
+          li.pricing__col.pricing__col--3: p #{pricing.intensive.option3.automatic} £
+            p.pricing__earn you save 50 £
+      .pricing__info
+        header
+          h3.sub-heading Recommend A Friend For a 
+            span.color-secondary FREE LESSON
+          p Recommend A Friend offer is for existing pupils.
+        p Pass on their name to us or if they contact us, get them to mention your name.
+        p.mute ***Eligible for a free lesson When your friend completes six hours of driving lessons with us.
+                

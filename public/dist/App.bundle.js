@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -105,6 +105,46 @@ exports.$$ = $$;
 
 var _bling = __webpack_require__(0);
 
+var checkboxes = (0, _bling.$$)('input[type="checkbox"]'),
+    accountStatus = (0, _bling.$)('.account__status');
+
+checkboxes.on('click', function (e) {
+  // e.preventDefault();
+  var t = e.target;
+  // e.target.checked = true;
+  t.checked === true ? t.checked === false : t.checked === true;
+  // t.checked = !t.checked;
+  console.log(e.target.checked);
+});
+
+function addInitialStatus() {
+
+  console.log('CHECKED??', checkboxes);
+}
+
+addInitialStatus();
+
+// Hamburger menu
+// checkbox.onclick = (e) => {
+//   console.log(e); 
+//   console.log(e.target.checked);
+
+// };
+
+// function openMenu() {
+// // console.log(navMenu);
+// navMenu.classList.toggle('open');
+// }
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _bling = __webpack_require__(0);
+
 var hamburger = (0, _bling.$)('#header__hamburger');
 var navMenu = (0, _bling.$)('.nav__list');
 
@@ -119,56 +159,25 @@ function openMenu() {
 }
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+
+__webpack_require__(3);
 
 __webpack_require__(2);
 
 __webpack_require__(1);
 
-__webpack_require__(5);
-
 var _bling = __webpack_require__(0);
-
-/***/ }),
-/* 4 */,
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _bling = __webpack_require__(0);
-
-var checkbox = (0, _bling.$)('#passedTest');
-var accountStatus = (0, _bling.$)('.account__status');
-
-function addInitialStatus() {
-
-  console.log('CHECKED??', checkbox.checked);
-}
-
-addInitialStatus();
-
-// Hamburger menu
-checkbox.onclick = function (e) {
-  console.log(e);
-  console.log(e.target.checked);
-};
-
-// function openMenu() {
-// // console.log(navMenu);
-// navMenu.classList.toggle('open');
-// }
 
 /***/ })
 /******/ ]);

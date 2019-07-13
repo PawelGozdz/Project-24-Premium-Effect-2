@@ -2,6 +2,13 @@ extends layout
 
 include mixins/_registerForm
 
+
+block SEO
+  meta(name='Register', content='Register and stay in touch with Premium Effect Driving School.')
+
+block title
+  title Contact Us | Premium Effect Driving School
+
 block messages
   if locals.flashes
     .flash-messages

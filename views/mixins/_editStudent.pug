@@ -1,0 +1,73 @@
+mixin editStudent(editStudent = {})
+  form(action=(`/${edit ? 'edit' : 'add'}-student`) method="POST").form__edit
+    h5 Basic Info ( mandatory )
+    .form__input-group
+      .form__group
+        label(for="name") Name
+        input(type="text" name="name" id="name"
+          value=(edit ? editStudent.name : ''))
+      .form__group
+        label(for="exam") Exam Date
+        input(type="date" name="exam" id="exam"
+          value=(edit ? editStudent.exam : ''))
+      .form__group
+        label(for="header") Your Title
+        input(type="text" name="header" id="header"
+          value=(edit ? editStudent.header : ''))
+      .form__input-group
+        span.form__section-title Display
+        .checkbox
+          input(type='checkbox' id='display' name='display' 
+            value=(edit ? editStudent.displayStatus : '')).checkbox__input
+          label(for='display').checkbox__label
+        span.section__status Status
+    h5 Social Media ( optional )
+    .form__input-group
+      .form__group
+        label(for="facebook") Facebook
+        input(type="text" id="facebook" name="facebook"
+          value=(edit ? editStudent.socialMedia.facebook : ''))
+      .form__group
+        label(for="instagram") Instagram
+        input(type="text" id="instagram" name="instagram"
+          value=(edit ? editStudent.socialMedia.instagram : ''))
+      .form__group
+        label(for="youtube") Youtube
+        input(type="text" id="youtube" name="youtube"
+          value=(edit ? editStudent.socialMedia.youtube : ''))
+    h5 Instructor Info ( mandatory )
+    .form__input-group
+      .form__group
+        label(for="instructor") Instructor
+        select(id="instructor")
+          option(value="" disabled selected) Choose an Instructor
+          each instructor in h.instructors
+            option(value=(instructor.slug))= instructor.name
+      .form__group
+        label(for="hours") Hours Used
+        input(type="number" name="hours" id="hours"
+          value=(edit ? editStudent.instructor.hours : ''))
+      .form__group
+        label(for="rate") Student Rating ( 1-5 )
+        input(type="number" name="rate" id="rate" min="1" max="5"
+          value=(edit ? editStudent.instructor.rate : ''))
+    .form__input-group
+      .form__group.form__description
+        label(for="description") Description
+        - const textAreaValue = edit ? editStudent.description : ''
+        textarea(name="description", id="description" rows="4")= textAreaValue
+    h5 Photos
+    .form__input-group
+      label(for="photo") Add Photos ( optional )
+      input(type="file" name="photo" id="photo"
+        value=(edit ? editStudent.photo : ''))
+      if editStudent.photos
+        each photo, indes in editStudent.photos
+          figure.form__image
+            a(href="#")
+              img(src=`/uploads/${photo}`, alt=editStudent.title width=200, value=index)
+            figcaption=editStudent.name
+    .form__input-group.submit
+      input(type="submit" value="Submit New Student").button.button__cta
+      input(type="checkbox" value="checkbox" checked)
+

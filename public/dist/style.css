@@ -618,22 +618,22 @@ section {
   height: auto;
   padding-bottom: 3rem; }
 
-.container, .details .content, .header .content, .car .content, .services .content, .lessons .content, .testimonials .content, .footer .content, .login .content, .account .content {
+.container, .details .content, .header .content, .pricing .content, .links .content, .terms .content, .car .content, .services .content, .lessons .content, .testimonials .content, .footer .content, .login .content, .account .content, .contact .content {
   width: 90%;
   position: relative;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 36em) and (max-width: 48em) {
-    .container, .details .content, .header .content, .car .content, .services .content, .lessons .content, .testimonials .content, .footer .content, .login .content, .account .content {
+    .container, .details .content, .header .content, .pricing .content, .links .content, .terms .content, .car .content, .services .content, .lessons .content, .testimonials .content, .footer .content, .login .content, .account .content, .contact .content {
       width: 92%; } }
   @media (min-width: 48em) and (max-width: 65em) {
-    .container, .details .content, .header .content, .car .content, .services .content, .lessons .content, .testimonials .content, .footer .content, .login .content, .account .content {
+    .container, .details .content, .header .content, .pricing .content, .links .content, .terms .content, .car .content, .services .content, .lessons .content, .testimonials .content, .footer .content, .login .content, .account .content, .contact .content {
       width: 90%; } }
   @media (min-width: 65em) and (max-width: 90em) {
-    .container, .details .content, .header .content, .car .content, .services .content, .lessons .content, .testimonials .content, .footer .content, .login .content, .account .content {
+    .container, .details .content, .header .content, .pricing .content, .links .content, .terms .content, .car .content, .services .content, .lessons .content, .testimonials .content, .footer .content, .login .content, .account .content, .contact .content {
       width: 87%; } }
   @media (min-width: 90em) {
-    .container, .details .content, .header .content, .car .content, .services .content, .lessons .content, .testimonials .content, .footer .content, .login .content, .account .content {
+    .container, .details .content, .header .content, .pricing .content, .links .content, .terms .content, .car .content, .services .content, .lessons .content, .testimonials .content, .footer .content, .login .content, .account .content, .contact .content {
       width: 83%; } }
 
 p {
@@ -652,8 +652,10 @@ li {
 button {
   border: 0; }
 
-input, textarea {
-  border: 0; }
+input, textarea, select, option {
+  border: 1px solid transparent; }
+  input:focus, textarea:focus, select:focus, option:focus {
+    outline: 0; }
 
 input:active,
 input:target,
@@ -824,7 +826,7 @@ picture {
     margin: 0; }
 
 .details {
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: rgba(37, 37, 37, 0.85); }
   .details .content {
     box-sizing: border-box;
@@ -835,11 +837,11 @@ picture {
     -ms-flex-pack: center;
         justify-content: center; }
     .details .content > span {
-      font-size: .8rem;
+      font-size: 0.8rem;
       color: #fff;
-      margin-top: .5rem; }
+      margin-top: 0.5rem; }
       .details .content > span:first-child {
-        margin-right: .5rem; }
+        margin-right: 0.5rem; }
     @media (min-width: 48em) {
       .details .content {
         -ms-flex-pack: end;
@@ -853,7 +855,7 @@ picture {
     .details .detail svg {
       width: 1.5rem;
       height: 1.5rem;
-      margin-right: .5rem; }
+      margin-right: 0.5rem; }
 
 .header {
   border-bottom: 2px solid rgba(255, 196, 14, 0.8);
@@ -901,7 +903,7 @@ picture {
     cursor: pointer;
     z-index: 1000;
     max-width: 2.5rem;
-    margin-top: .4rem;
+    margin-top: 0.4rem;
     margin-left: auto; }
     @media (min-width: 36em) {
       .header__hamburger {
@@ -928,11 +930,11 @@ picture {
         align-items: center; }
     @media (min-width: 48em) {
       .header .nav {
-        padding: .5rem; } }
+        padding: 0.5rem; } }
     .header .nav__list {
       text-align: center;
       z-index: 10;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
       margin-left: auto;
       display: none;
       -ms-flex: 1;
@@ -962,13 +964,13 @@ picture {
       margin-bottom: 1rem; }
       @media (min-width: 48em) {
         .header .nav__item {
-          margin-right: .4rem;
+          margin-right: 0.4rem;
           display: inline-block; }
           .header .nav__item:last-child {
             margin-right: 0; } }
       @media (min-width: 65em) and (max-width: 90em) {
         .header .nav__item {
-          margin-right: .8rem; } }
+          margin-right: 0.8rem; } }
       @media (min-width: 90em) {
         .header .nav__item {
           margin-right: 1.1rem; } }
@@ -979,10 +981,10 @@ picture {
     .header .nav__link {
       font-size: 1rem;
       display: block;
-      padding: .35rem .55rem;
+      padding: 0.35rem 0.55rem;
       border-radius: 3px;
       box-shadow: 0 2px 2px #d6d6d6;
-      transition: .3s ease;
+      transition: 0.3s ease;
       background-color: rgba(255, 196, 14, 0.8); }
       .header .nav__link:hover {
         box-shadow: 0 2px 4px 1px #d6d6d6;
@@ -997,6 +999,113 @@ picture {
       color: #4267b2; }
     .header .nav .active {
       border: 2px solid #E50714; }
+
+.pricing .content {
+  margin-bottom: 4rem; }
+
+@media (min-width: 48em) {
+  .pricing__header {
+    font-size: 60%; } }
+
+.pricing h3 {
+  margin: 1.4rem 0 2rem; }
+
+.pricing__info {
+  max-width: 55rem;
+  margin: auto;
+  margin-bottom: 2rem; }
+
+.pricing header {
+  border-bottom: 1px solid #d6d6d6;
+  margin-bottom: 1rem; }
+  .pricing header + ul li {
+    margin-bottom: 0.7rem; }
+  .pricing header + p {
+    margin-bottom: 0.7rem; }
+  .pricing header > p {
+    font-weight: bold; }
+
+.pricing__col {
+  display: inline-block;
+  vertical-align: top; }
+  .pricing__col--1 {
+    width: 60%; }
+  .pricing__col--2 {
+    width: 20%;
+    text-align: right;
+    padding-right: 0.5rem; }
+    @media (min-width: 36em) {
+      .pricing__col--2 {
+        padding-right: 2rem; } }
+  .pricing__col--3 {
+    width: 20%; }
+
+.pricing__read {
+  font-size: 0.75rem; }
+  @media (min-width: 48em) {
+    .pricing__read {
+      font-size: 0.85rem; } }
+
+.pricing__earn {
+  font-weight: bold;
+  color: #E50714;
+  font-size: 0.65rem; }
+  @media (min-width: 48em) {
+    .pricing__earn {
+      font-size: 0.75rem; } }
+
+.pricing .mute {
+  color: rgba(177, 177, 177, 0.85); }
+
+.links {
+  background-image: linear-gradient(transparent, rgba(147, 255, 0, 0.15), rgba(255, 196, 14, 0.25)); }
+  .links .content {
+    margin-bottom: 4rem; }
+  .links h3 {
+    margin-bottom: 1.5rem; }
+  .links__info {
+    max-width: 55rem;
+    margin: auto;
+    margin-bottom: 2rem; }
+    .links__info > * {
+      margin-bottom: 0.7rem; }
+    .links__info p {
+      font-size: 1rem; }
+    .links__info a {
+      font-size: 85%; }
+    .links__info i {
+      display: inline-block;
+      margin-right: 0.5rem;
+      font-size: 1.4rem;
+      color: #0097e6; }
+    .links__info h3 {
+      border-bottom: 1px solid #d6d6d6;
+      margin-bottom: 1rem; }
+    .links__info a {
+      color: #21629c; }
+      .links__info a:hover {
+        text-decoration: underline; }
+
+.terms {
+  background-image: linear-gradient(transparent, rgba(38, 33, 97, 0.15), rgba(255, 196, 14, 0.25)); }
+  .terms .content {
+    margin-bottom: 4rem; }
+  .terms h3 {
+    margin-bottom: 1.8rem; }
+    @media (min-width: 48em) {
+      .terms h3 {
+        margin-bottom: 2.1rem; } }
+  .terms__box {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    max-width: 55rem; }
+    .terms__box p {
+      margin-bottom: 0.5rem; }
+      .terms__box p i {
+        display: inline-block;
+        margin-right: 0.5rem;
+        font-size: 1.4rem;
+        color: #0097e6; }
 
 .button {
   background-color: #f3f3f3;
@@ -1240,8 +1349,8 @@ input[type=checkbox] {
         flex: 1; }
     @media (min-width: 48em) {
       .lessons__box {
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%; } }
+        -ms-flex: 0 0 47%;
+            flex: 0 0 47%; } }
     .lessons__box h3.sub-heading, .lessons__box .testimonials__number {
       margin-bottom: 3rem; }
     .lessons__box--img {
@@ -1423,40 +1532,116 @@ input[type=checkbox] {
     color: #E50714;
     background-color: rgba(255, 196, 14, 0.8); }
 
-.account .content {
-  text-align: center; }
-
-.account .form {
-  background-color: white;
-  padding: .5rem .75rem;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  font-size: .9rem; }
-  .account .form__input-group {
+.account {
+  outline-color: transparent;
+  outline: none; }
+  .account .content {
+    text-align: center; }
+  .account__forms {
+    background-color: white;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    box-shadow: 1px 1px 3px -1px #d6d6d6;
+    font-size: .9rem;
+    margin-bottom: .5rem; }
+  .account .form__sections {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .account .form__sections > * {
+      box-shadow: 1px 1px 3px -1px #d6d6d6; }
+      .account .form__sections > *:hover {
+        box-shadow: 1px 1px 13px 0 #d6d6d6; }
+  .account .form__input-group, .account .form__group {
+    margin: .5rem .75rem;
     margin-right: 1rem;
     border: 1px solid #f3f3f3;
     padding: .5rem 1rem;
     box-sizing: border-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
     -ms-flex-align: center;
         align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .account .form__edit {
+    -ms-flex: 1;
+        flex: 1;
+    max-width: 100%; }
+  .account .form__group {
     box-shadow: 1px 1px 3px -1px #d6d6d6; }
-    .account .form__input-group:hover {
+    .account .form__group:hover {
       box-shadow: 1px 1px 13px 0 #d6d6d6; }
+    .account .form__group label {
+      margin-right: .75rem; }
+    .account .form__group input, .account .form__group textarea, .account .form__group select, .account .form__group option {
+      color: rgba(75, 75, 75, 0.85); }
+  .account .form__description {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    width: 100%; }
+    .account .form__description textarea {
+      -ms-flex: 1;
+          flex: 1; }
+  .account .form__status {
+    display: inline-block;
+    padding: .25rem .35rem;
+    border: 1px solid transparent;
+    margin-right: .5rem; }
+    .account .form__status--active {
+      border: 1px solid #93FF00;
+      color: #93FF00; }
+    .account .form__status--inactive {
+      border: 1px solid rgba(255, 196, 14, 0.8);
+      color: rgba(255, 196, 14, 0.8); }
+  .account input[type="submit"] {
+    background-color: #93FF00;
+    color: rgba(75, 75, 75, 0.85); }
 
-.account__status {
-  padding: .25rem .35rem;
-  border: 1px solid transparent; }
-  .account__status--active {
-    border: 1px solid #93FF00;
-    color: #93FF00; }
-  .account__status--inactive {
-    border: 1px solid rgba(255, 196, 14, 0.8);
-    color: rgba(255, 196, 14, 0.8); }
+.contact .content {
+  margin-bottom: 4rem; }
+
+.contact__details {
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  @media (min-width: 48em) {
+    .contact__details {
+      -ms-flex-direction: row;
+          flex-direction: row; } }
+
+.contact__detail {
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #d6d6d6; }
+  @media (min-width: 48em) {
+    .contact__detail {
+      box-sizing: border-box;
+      -ms-flex: 0 0 33.3333%;
+          flex: 0 0 33.3333%;
+      text-align: center;
+      border-bottom: 1px solid transparent;
+      margin-bottom: 6rem; } }
+
+.contact header i {
+  font-size: 1.5rem;
+  color: #0097e6; }
+
+.contact header h3 {
+  margin-bottom: 1.2rem; }
+
+.contact iframe {
+  width: 100%;
+  height: 18rem;
+  min-height: 15rem; }
 
 /*# sourceMappingURL=style.css.map*/

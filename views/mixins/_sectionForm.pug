@@ -1,0 +1,9 @@
+mixin sectionForm(sectionForm = {})
+  form(action=sectionForm.action method="POST").form__sections
+    .form__input-group
+      span.form__section-title #{sectionForm.title}
+      .checkbox
+        input(type=sectionForm.type id=sectionForm.id name=sectionForm.id value=sectionForm.value class=sectionForm.class).checkbox__input
+        label(for=sectionForm.id).checkbox__label
+      span.form__status Statuss
+      input(type="submit" value="Confirm").button.button__cta

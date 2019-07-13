@@ -1,0 +1,45 @@
+extends layout
+
+include mixins/_registerForm
+
+block SEO
+  meta(name='Contact', content='Stay in touch with Premium Effect Driving School by email or phone. ')
+
+block title
+  title Contact Us | Premium Effect Driving School
+
+block messages
+  if locals.flashes
+    .flash-messages
+      - const categories = Object.keys(locals.flashes)
+      each category in categories
+        each message in flashes[category]
+          .flash(class=`flash--${category}`)
+            p.flash__text!= message
+            button.flash__remove(onClick="this.parentElement.remove()") &times;      
+
+block content
+
+  section.contact#contact
+    .content
+      h2 Contact Details
+      .contact__details
+        article.contact__detail
+          header
+            i.icon-address
+            h3.sub-heading Address
+          p 22 Kathie Road #[br] MK42 0QJ Bedford
+            
+        article.contact__detail
+          header
+            i.icon-phone
+            h3.sub-heading Phone
+          p 07864378009 #[br] 07897678365
+
+        article.contact__detail
+          header
+            i.icon-email
+            h3.sub-heading Email
+          p premiumeﬀect.drivingschool@gmail.com
+
+      iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2449.5802797227643!2d-0.4615691845595896!3d52.12376517974116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877b6be4a48c817%3A0xcea23761b856b8aa!2s22+Kathie+Rd%2C+Bedford+MK42+0QJ%2C+Wielka+Brytania!5e0!3m2!1spl!2spl!4v1555527035642!5m2!1spl!2spl', frameborder='0', style='border:0', allowfullscreen='')

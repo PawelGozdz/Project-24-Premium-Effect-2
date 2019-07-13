@@ -1,0 +1,86 @@
+.pricing {
+  .content {
+    margin-bottom: 4rem;
+    @include container();
+  }
+
+  &__header {
+    @include from(3) {
+      font-size: 60%;
+    }
+  }
+
+  h3 {
+    margin: 1.4rem 0 2rem;
+  }
+
+  &__info {
+    max-width: $container-small;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  header {
+    border-bottom: 1px solid $grey-medium;
+    margin-bottom: 1rem;
+
+    & + ul li {
+      margin-bottom: 0.7rem;
+    }
+    & + p {
+      margin-bottom: 0.7rem;
+    }
+
+    & > p {
+      font-weight: bold;
+    }
+  }
+
+  &__col {
+    display: inline-block;
+    vertical-align: top;
+
+    &--1 {
+      width: 60%;
+    }
+
+    &--2 {
+      width: 20%;
+      text-align: right;
+      padding-right: 0.5rem;
+
+      @include from(2) {
+        padding-right: 2rem;
+      }
+    }
+    &--3 {
+      width: 20%;
+    }
+  }
+
+  &__read {
+    font-size: 0.75rem;
+
+    @include from(3) {
+      font-size: 0.85rem;
+    }
+  }
+
+  p {
+    // font-size: 90%;
+  }
+
+  &__earn {
+    font-weight: bold;
+    color: $color-secondary;
+    font-size: 0.65rem;
+
+    @include from(3) {
+      font-size: 0.75rem;
+    }
+  }
+
+  .mute {
+    color: lighten($grey-dark, 40%);
+  }
+}

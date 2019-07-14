@@ -2,6 +2,9 @@
   This is a file of data and helper functions that we can expose and use in our templating function
 */
 
+// Getting SiteSettings model
+const siteSettings = require('./models/SiteSettings');
+
 // FS is a built in module to node that let's us read files from the system we're running on
 const fs = require('fs');
 
@@ -22,6 +25,29 @@ exports.icon = name => fs.readFileSync(`./public/images/icons/${name}.svg`);
 
 // Some details about the site
 exports.siteName = `Premium Effect Driving School!`;
+
+// Site address and other settings
+exports.getSiteSettings = async (req, res, next) => {
+  const settingsDB = await siteSettings.find({});
+  if (settingsDB) {
+    return settingsDB[0];
+  }
+
+  // return fallback if error from DB
+  return {
+    address: {
+      city: 'Bedford',
+      street: 'Kathie Road',
+      houseNumber: '22',
+      postCode: 'MK42 0QJ',
+      county: 'Beds',
+      country: 'UK'
+    },
+    name: 'Premium Effect Driving School',
+    phone: ['07864378009', '07897678365'],
+    email: 'premiumeﬀect.drivingschool@gmail.com'
+  };
+};
 
 // Get random number
 const getRandomNumber = scope => Math.floor(Math.random() * scope);

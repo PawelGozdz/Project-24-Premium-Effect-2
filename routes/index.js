@@ -8,6 +8,8 @@ const studentController = require('../controllers/studentController');
 // Do work here
 router.get('/', catchErrors(premiumController.getIndex));
 router.get('/prices', catchErrors(premiumController.getPricing));
+router.post('/prices', premiumController.postPricing);
+
 router.get('/useful-links', premiumController.getLinks);
 router.get('/terms', premiumController.getTerms);
 router.get('/contact', premiumController.getContact);

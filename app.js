@@ -14,6 +14,9 @@ const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
 require('./handlers/passport');
 
+// const siteSettings = require('./helpers/getSiteSettings');
+// // const abc = require('./helpers/sit');
+
 // create our Express app
 const app = express();
 
@@ -54,11 +57,12 @@ app.use(passport.session());
 app.use(flash());
 
 // pass variables to our templates + all requests
-app.use((req, res, next) => {
+app.use(async (req, res, next) => {
   res.locals.h = helpers;
   res.locals.flashes = req.flash();
   res.locals.user = req.user || null;
   res.locals.currentPath = req.path;
+  res.locals.site = await helpers.getSiteSettings();
   next();
 });
 

@@ -1,13 +1,65 @@
 doctype html
 html
   head
-    //- title= `${title} | ${h.siteName}`
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(name='subject', content='Driving lessons, learn to drive a car with manual or automatic transmission.')
+    meta(name='Copyright', content=`${site.name}`)
+    meta(name='author', content='RWD Strony Internetowe')
+    meta(name='Designer', content='RWD Strony Internetowe')
+    meta(name='Geography', content=`${site.address.houseNumber} ${site.address.street}, ${site.address.postCode} ${site.address.city}`)
+    meta(name='Language', content='English, Polski, Polish')
+    meta(name='Publisher', content=`${site.name}, RWD Strony Internetowe`)
+    meta(name='distribution', content='Local')
+    meta(name='zipcode', content=`${site.address.postCode}`)
+    meta(name='city', content=`${site.address.city}`)
+    meta(name='country', content=`England, ${site.address.city}`)
+    meta(name='Classification', content='Premium Effect Driving School offers a variety of courses for drivers at a competitive price. Choose between manual and automatic transmission. Get ready for your theory and practical test with our driving instructors.')
+    meta(name='Keywords', content='Driving school near me, Driving School, Driving Licence, driving a car')
+    meta(name='msapplication-TileColor', content='#FFFFFF')
+
     link(rel='stylesheet', href='/dist/style.css')
-    meta(name="viewport" content="width=device-width, initial-scale=1")
 
     block SEO
 
     block title
+
+    script(type='application/ld+json').
+      {
+      "@context": "http://schema.org",
+      "@type": "DrivingSchoolVehicleUsage",
+      "name": "Premium Effect Driving School",
+      "image": "www.premiumeffect.co.uk/assets/images/logo-h.png",
+      "@id": "",
+      "url": "www.premiumeffect.co.uk",
+      "telephone": "07864378009, 07897678365",
+      "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "22 Kathie Road",
+      "addressLocality": "Bedford",
+      "postalCode": " MK42 0QJ",
+      "addressCountry": "UK"
+      },
+      "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 52.123920,
+      "longitude": -0.459910
+      },
+      "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+      ],
+      "opens": "07:00",
+      "closes": "16:00"
+      }
+      }
 
   body
     #wrapper
@@ -16,7 +68,8 @@ html
           .content
             span.detail
               i.icon-smartphone
-              span 07864378009 / 07897678365
+              each phone, index in site.phone
+                span= phone
             span.detail
               i.icon-place
               span Bedford, Milton Keynes and local areas

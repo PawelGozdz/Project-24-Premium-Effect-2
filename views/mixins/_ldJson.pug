@@ -1,0 +1,39 @@
+mixin ldJson()
+  script
+    - const ldJson = () => {
+      return `
+        {
+          "@context": "http://schema.org",
+          "@type": "DrivingSchoolVehicleUsage",
+          "name": "${site.name}",
+          "image": "www.premiumeffect.co.uk/assets/images/logo-h.png",
+          "@id": "",
+          "url": "www.premiumeffect.co.uk",
+          "telephone": "07864378009, 07897678365",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "${site.address.houseNumber} ${site.address.street}",
+            "addressLocality": "${site.address.city}",
+            "postalCode": "${site.address.postCode}",
+            "addressCountry": "${site.address.country}"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": ${site.address.lat},
+            "longitude": ${site.address.lng}
+          },
+          "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:00",
+          "closes": "16:00"
+          }
+        }
+      `;
+  };

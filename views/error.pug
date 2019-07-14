@@ -1,5 +1,12 @@
 extends layout
 
+block SEO
+  meta(name='Description', content='Error Page. Most probably this page is not existing!')
+  meta(name='robots', content='noindex,nofollow')
+
+block title
+  title Error Page | Premium Effect Driving School
+
 block content
   .inner
     h2= status

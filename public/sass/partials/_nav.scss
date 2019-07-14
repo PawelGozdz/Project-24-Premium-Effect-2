@@ -26,6 +26,13 @@
     @include grid();
     align-items: center;
 
+    & > span:not(:last-of-type) {
+      &:after {
+        content: '|';
+        margin: 0 0.25rem;
+      }
+    }
+
     & svg {
       width: 1.5rem;
       height: 1.5rem;

@@ -1,0 +1,26 @@
+mixin pricingInfo(info = {})
+  .pricing__info
+    header
+      h3.sub-heading= info.mainHeader
+      if info.header
+        p= info.header
+    if info.paragrapn !== ''
+      p= info.paragraph
+    if info.subHeader
+      p.mute= info.subHeader
+    
+    each offer in info.offer
+      if (offer.title)
+        ul.pricing__row
+          li.pricing__col.pricing__col--1
+            p= offer.title
+            if (offer.desc)
+              span.pricing__read= offer.desc
+          li.pricing__col.pricing__col--2
+            p #{`${offer.manual.price} £`}
+            if (offer.manual.priceDesc)
+              p= offer.manual.priceDesc
+          li.pricing__col.pricing__col--3
+            p #{`${offer.auto.price} £`}
+            if (offer.auto.priceDesc)
+              p.pricing__earn #{`${offer.auto.priceDesc} £`}

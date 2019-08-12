@@ -14,9 +14,6 @@ const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
 require('./handlers/passport');
 
-// const siteSettings = require('./helpers/getSiteSettings');
-// // const abc = require('./helpers/sit');
-
 // create our Express app
 const app = express();
 

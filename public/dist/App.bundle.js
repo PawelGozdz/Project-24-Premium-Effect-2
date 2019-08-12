@@ -105,36 +105,12 @@ exports.$$ = $$;
 
 var _bling = __webpack_require__(0);
 
-var checkboxes = (0, _bling.$$)('input[type="checkbox"]'),
-    accountStatus = (0, _bling.$)('.account__status');
+var checkboxes = (0, _bling.$$)('input[type="checkbox"]');
 
 checkboxes.on('click', function (e) {
-  // e.preventDefault();
   var t = e.target;
-  // e.target.checked = true;
   t.checked === true ? t.checked === false : t.checked === true;
-  // t.checked = !t.checked;
-  console.log(e.target.checked);
 });
-
-// function addInitialStatus() {
-
-//   console.log('CHECKED??', checkboxes);
-// }
-
-// addInitialStatus();
-
-// Hamburger menu
-// checkbox.onclick = (e) => {
-//   console.log(e);
-//   console.log(e.target.checked);
-
-// };
-
-// function openMenu() {
-// // console.log(navMenu);
-// navMenu.classList.toggle('open');
-// }
 
 /***/ }),
 /* 2 */
@@ -154,7 +130,6 @@ hamburger.onclick = function (e) {
 };
 
 function openMenu() {
-  // console.log(navMenu);
   navMenu.classList.toggle('open');
 }
 
@@ -176,8 +151,6 @@ __webpack_require__(3);
 __webpack_require__(2);
 
 __webpack_require__(1);
-
-var _bling = __webpack_require__(0);
 
 /***/ })
 /******/ ]);

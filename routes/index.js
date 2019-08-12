@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const { catchErrors } = require('../handlers/errorHandlers');
 const premiumController = require('../controllers/premiumController');
-const authController = require('../controllers/authController');
-const studentController = require('../controllers/studentController');
+// const authController = require('../controllers/authController');
+// const studentController = require('../controllers/studentController');
 
 // Do work here
 router.get('/', catchErrors(premiumController.getIndex));

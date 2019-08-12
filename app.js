@@ -20,10 +20,8 @@ mongoose.connection.on('error', err => {
 });
 
 // READY?! Let's go!
-// require('./models/Links');
-// require('./models/Img');
 require('./models/User');
-require('./models/Student');
+// require('./models/Student');
 require('./models/SiteSettings');
 require('./models/Pricing');
 

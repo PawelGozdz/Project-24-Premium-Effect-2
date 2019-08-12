@@ -4,7 +4,7 @@ import { $$ } from './bling';
 const checkboxes = $$('input[type="checkbox"]'),
   accountStatus = $('.account__status');
 
-checkboxes.on('click', (e) => {
+checkboxes.on('click', e => {
   // e.preventDefault();
   const t = e.target;
   // e.target.checked = true;
@@ -13,18 +13,18 @@ checkboxes.on('click', (e) => {
   console.log(e.target.checked);
 });
 
-function addInitialStatus() {
-  
-  console.log('CHECKED??', checkboxes);
-}
+// function addInitialStatus() {
 
-addInitialStatus();
+//   console.log('CHECKED??', checkboxes);
+// }
+
+// addInitialStatus();
 
 // Hamburger menu
 // checkbox.onclick = (e) => {
-//   console.log(e); 
+//   console.log(e);
 //   console.log(e.target.checked);
-  
+
 // };
 
 // function openMenu() {

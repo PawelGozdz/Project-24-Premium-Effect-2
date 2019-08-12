@@ -117,16 +117,16 @@ checkboxes.on('click', function (e) {
   console.log(e.target.checked);
 });
 
-function addInitialStatus() {
+// function addInitialStatus() {
 
-  console.log('CHECKED??', checkboxes);
-}
+//   console.log('CHECKED??', checkboxes);
+// }
 
-addInitialStatus();
+// addInitialStatus();
 
 // Hamburger menu
 // checkbox.onclick = (e) => {
-//   console.log(e); 
+//   console.log(e);
 //   console.log(e.target.checked);
 
 // };

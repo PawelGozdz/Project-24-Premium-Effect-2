@@ -1,16 +1,16 @@
 doctype html
-html
+html(lang='en-GB')
   head
-    //- // Global site tag (gtag.js) - Google Analytics
-    //- script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-139031364-1')
-    //- script.
-    //-   window.dataLayer = window.dataLayer || [];
-    //-   function gtag(){dataLayer.push(arguments);}
-    //-   gtag('js', new Date());
-    //-   gtag('config', 'UA-139031364-1');
+    // Global site tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-139031364-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-139031364-1');
     
     meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=5')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
     meta(http-equiv='content-type', content='text/html; charset=utf-8')
     meta(name='subject', content='Driving lessons, learn to drive a car with manual or automatic transmission.')
@@ -40,7 +40,7 @@ html
     link(rel='icon' type='image/png' sizes='32x32' href='./images/favicon/favicon-32x32.png')
     link(rel='icon' type='image/png' sizes='96x96' href='./images/favicon/favicon-96x96.png')
     link(rel='icon' type='image/png' sizes='16x16' href='./images/favicon/favicon-16x16.png')
-    link(rel='manifest' href='./manifest.json')
+    //- link(rel='manifest' href='./manifest.json')
     meta(name='msapplication-TileColor' content='#ffffff')
     meta(name='msapplication-TileImage' content='./images/favicon/ms-icon-144x144.png')
     meta(name='theme-color' content='#ffffff')
@@ -151,7 +151,7 @@ html
               p All Rights Reserved &reg; #{new Date().getFullYear()}
               p.footer__designer 
                 span.mute Designed by
-                a(href="http://rwd-stronyinternetowe.pl", target="_blank").mute RWD Strony Internetowe
+                a(href="http://rwd-stronyinternetowe.pl", target="_blank" rel="noopener").mute RWD Strony Internetowe
 
       block scripts
         script(src="/dist/App.bundle.js")

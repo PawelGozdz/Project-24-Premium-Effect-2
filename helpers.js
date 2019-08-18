@@ -229,7 +229,7 @@ exports.testimonials = [
   },
   {
     name: 'James Garlo',
-    star: '4.9',
+    star: '5.0',
     text:
       "Marge was the best driving instructor I have had in 18 years!! I used to hate driving but Marge helped me enjoy controlling the car and before long I couldn't wait to get back in the driving seat!! She is patient, calm and helps put you at ease. She is extremely knowledgeable on all aspects of drivig and helped me with my understanding of driving safely, manouveures and enjoying driving! I would recommend Marge to anybody who wants to learn safely, efficiently and in a calm environment! She is amazing and the best in the business!! Thanks Marge and Resto Driving School for making me a very happy driver!!"
   },

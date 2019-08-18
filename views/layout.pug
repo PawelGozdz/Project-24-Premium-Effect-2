@@ -1,13 +1,7 @@
 doctype html
 html
   head
-    // Global site tag (gtag.js) - Google Analytics
-    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-139031364-1')
-    script.
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-139031364-1');
+    
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
@@ -72,42 +66,41 @@ html
 
   body
     #wrapper
-      block header
-        div.details
-          .content
-            span.detail
-              i.icon-smartphone
-              each phone, index in site.phone
-                span= phone
-            span.detail
-              i.icon-place
-              span Bedford, Milton Keynes and local areas
-        header.header
-          .content
-            .header__controls
-              a.header__logo(href="/")
-                img(src="/images/photos/logo-h.png", alt="Premium Effect Driving School logo")
-              .header__hamburger#header__hamburger
-                .header__hamburger1
-                .header__hamburger2
-                .header__hamburger3
-            nav.nav
-              ul.nav__list
-                each item in h.menu
-                  li.nav__item
-                    a.nav__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'active' : ''),
-                    class=(item.class))
-                      span #{item.title}
-                //- if user
-                  li.nav__item.nav__item--user
-                    a.nav__link(href='/account', class=(currentPath.startsWith('/account') ? 'active' : '')) Account
-                  li.nav__item.nav__item--user
-                    a.nav__link(href='/logout') Logout
-                //- else
-                  li.nav__item.nav__item--user
-                    a.nav__link(href='/login') Login
-                  li.nav__item.nav__item--user
-                    a.nav__link(href='/register') Register
+      div.details
+        .content
+          span.detail
+            i.icon-smartphone
+            each phone, index in site.phone
+              span= phone
+          span.detail
+            i.icon-place
+            span Bedford, Milton Keynes and local areas
+      header.header
+        .content
+          .header__controls
+            a.header__logo(href="/")
+              img(src="/images/photos/logo-h.png", alt="Premium Effect Driving School logo")
+            .header__hamburger#header__hamburger
+              .header__hamburger1
+              .header__hamburger2
+              .header__hamburger3
+          nav.nav
+            ul.nav__list
+              each item in h.menu
+                li.nav__item
+                  a.nav__link(href=item.slug, class=(item.slug === path ? 'active' : ''),
+                  class=(item.class))
+                    span #{item.title}
+              //- if user
+                li.nav__item.nav__item--user
+                  a.nav__link(href='/account', class=(currentPath.startsWith('/account') ? 'active' : '')) Account
+                li.nav__item.nav__item--user
+                  a.nav__link(href='/logout') Logout
+              //- else
+                li.nav__item.nav__item--user
+                  a.nav__link(href='/login') Login
+                li.nav__item.nav__item--user
+                  a.nav__link(href='/register') Register
                 
               
       main

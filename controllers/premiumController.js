@@ -1,16 +1,16 @@
 const Pricing = require('../models/Pricing');
 
 exports.getIndex = async (req, res, next) => {
-  res.render('index', { hero: req });
+  res.render('index', { hero: req, path: '/' });
 };
 
 exports.getPricing = async (req, res, next) => {
   const pricing = await Pricing.findOne({}).select('-_id -created -__v');
   if (!pricing) {
-    res.render('pricing', { hero: '', pricing: {} });
+    res.render('pricing', { hero: '', pricing: {}, path: '/prices' });
     return;
   }
-  res.render('pricing', { hero: '', pricing });
+  res.render('pricing', { hero: '', pricing, path: '/prices' });
 };
 
 exports.postPricing = async (req, res, next) => {
@@ -142,13 +142,13 @@ exports.postPricing = async (req, res, next) => {
 };
 
 exports.getLinks = (req, res, next) => {
-  res.render('links', { hero: '' });
+  res.render('links', { hero: '', path: '/useful-links' });
 };
 
 exports.getTerms = (req, res, next) => {
-  res.render('terms', { hero: '' });
+  res.render('terms', { hero: '', path: '/terms' });
 };
 
 exports.getContact = (req, res, next) => {
-  res.render('contact', { hero: '' });
+  res.render('contact', { hero: '', path: '/contact' });
 };

@@ -726,7 +726,7 @@ picture {
     height: auto;
     padding: 1rem;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 25%;
     box-sizing: border-box;
     display: -ms-flexbox;
     display: flex;
@@ -734,9 +734,12 @@ picture {
         flex-direction: column;
     -ms-flex-align: center;
         align-items: center; }
+    @media (min-width: 65em) {
+      .hero .content {
+        margin-top: 10%; } }
     .hero .content a {
       color: #fff;
-      padding: .5rem 1rem; }
+      padding: 0.5rem 1rem; }
       .hero .content a:first-of-type {
         margin-right: 1rem;
         background-color: #E50714; }

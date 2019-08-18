@@ -7,7 +7,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  
+
   &-- {
     background-image: url('/images/photos/premium-effect-index-ys.jpg');
 
@@ -21,7 +21,7 @@
 
   &--terms {
     background-image: url('/images/photos/premium-effect-terms-bs.jpg');
-    
+
     @include from(3) {
       background-image: url('/images/photos/premium-effect-terms-bm.jpg');
     }
@@ -32,7 +32,7 @@
 
   &--prices {
     background-image: url('/images/photos/premium-effect-prices-bs.jpg');
-    
+
     @include from(3) {
       background-image: url('/images/photos/premium-effect-prices-bm.jpg');
     }
@@ -71,13 +71,17 @@
     height: auto;
     padding: 1rem;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 25%;
     @include grid($flex-direction: column, $align-items: center);
     // flex-basis: 1;
 
+    @include from(4) {
+      margin-top: 10%;
+    }
+
     a {
       color: $white;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
 
       &:first-of-type {
         margin-right: 1rem;

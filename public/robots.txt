@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: www.premiumeffect.co.uk/sitemap.xml

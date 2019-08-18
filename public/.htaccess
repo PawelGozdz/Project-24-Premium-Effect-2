@@ -1,0 +1,17 @@
+# One year for image files
+<filesMatch ".(jpg|jpeg|png|gif|ico)$">
+Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+# One month for css and js
+<filesMatch ".(css|js)$">
+Header set Cache-Control "max-age=2628000, public"
+</filesMatch>
+
+RewriteEngine On
+## Przekierowywanie www.rwd... na nie www.rwd##
+RewriteCond %{HTTP_HOST} ^http://premiumeffect.co.uk
+RewriteRule (.*) http://www.premiumeffect.co.uk/$1 [R=301,L]
+## Usuwanie .html z linkow ##
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+

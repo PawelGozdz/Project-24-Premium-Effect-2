@@ -13,6 +13,7 @@ const routes = require('./routes/index');
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
 require('./handlers/passport');
+const compression = require('compression');
 
 // create our Express app
 const app = express();
@@ -68,6 +69,9 @@ app.use((req, res, next) => {
   req.login = promisify(req.login, req);
   next();
 });
+
+// compress all responses
+app.use(compression());
 
 // After allllll that above middleware, we finally handle our own routes!
 app.use('/', routes);

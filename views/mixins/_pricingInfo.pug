@@ -16,10 +16,10 @@ mixin pricingInfo(info = {})
             p= offer.title
             if (offer.desc)
               span.pricing__read= offer.desc
-          li.pricing__col.pricing__col--2
-            p #{`${offer.manual.price} £`}
-            if (offer.manual.priceDesc)
-              p= offer.manual.priceDesc
+          //- li.pricing__col.pricing__col--2
+          //-   p #{`${offer.manual.price} £`}
+          //-   if (offer.manual.priceDesc)
+          //-     p= offer.manual.priceDesc
           li.pricing__col.pricing__col--3
             p #{`${offer.auto.price} £`}
             if (offer.auto.priceDesc)

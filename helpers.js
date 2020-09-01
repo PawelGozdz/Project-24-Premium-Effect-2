@@ -151,7 +151,7 @@ exports.hero = [
   {
     slug: '/',
     title: 'Premium Effect Driving School',
-    subTitle: 'Manual & Automatic Driving Lessons for Teens and Adults',
+    subTitle: 'Automatic Driving Lessons for Teens and Adults',
     btn1: '/#car',
     btn1Text: 'Read More',
     btn2: '/contact',
